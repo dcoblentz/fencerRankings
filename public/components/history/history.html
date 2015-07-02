@@ -1,0 +1,30 @@
+<h2>{{name}}</h2>
+<div id="chart" style="height: 400px; min-width: 300px"></div>
+<table id="history-table" class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Opponent</th>
+            <th>Date</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Doubles</th>
+            <th>Old Rating</th>
+            <th>New Rating</th>
+            <th>Change</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="outcome in outcomes">
+            <td>{{$index + 1}}</td>
+            <td><a href="#/history/{{outcome.opponent._fencer}}">{{outcome.opponent.name}}</a></td>
+            <td>{{formatDate(outcome)}}</td>
+            <td>{{getWins(outcome)}}</td>
+            <td>{{getLosses(outcome)}}</td>
+            <td>{{outcome._bout.draws}}</td>
+            <td>{{outcome.oldRating}}</td>
+            <td>{{outcome.newRating}}</td>
+            <td class='{{getRatingStyle(outcome)}}'>{{outcome.newRating - outcome.oldRating}}</td>
+        </tr>
+    </tbody>
+</table>

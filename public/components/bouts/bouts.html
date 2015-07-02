@@ -1,0 +1,22 @@
+<table id="bouts-table" class="table">
+    <thead>
+        <tr>
+            <th>Fencer</th>
+            <th>Opponent</th>
+            <th>Date</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Doubles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="bout in bouts">
+            <td><a href="#/history/{{bout._fencer1._id}}">{{bout._fencer1.name}}</a></td>
+            <td><a href="#/history/{{bout._fencer2._id}}">{{bout._fencer2.name}}</a></td>
+            <td>{{formatDate(bout)}}</td>
+            <td>{{bout.wins}}</td>
+            <td>{{bout.losses}}</td>
+            <td>{{bout.draws}}</td>
+        </tr>
+    </tbody>
+</table>

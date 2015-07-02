@@ -1,0 +1,18 @@
+<table id="fencer-table" class="table">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Names</th>
+            <th>Bouts Fought</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="fencer in fencers">
+            <td>{{$index + 1}}</td>
+            <td><a href="#/history/{{fencer._id}}">{{fencer.name}}</a></td>
+            <td>{{fencer.boutsFought}}</td>
+            <td>{{fencer.rating}}</td>
+        </tr>
+    </tbody>
+</table>
