@@ -85,7 +85,7 @@ FencerController.prototype = {
 
         Fencer.remove({
             _id: fencer_id
-        }, function (err, todo) {
+        }, function (err, fencer) {
             if (err) {
                 callback(err);
             } else {
