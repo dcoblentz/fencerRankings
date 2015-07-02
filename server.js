@@ -35,4 +35,4 @@ require('./app/routes')(app);
 app.listen(8080);
 console.log("App listening on port 8080");
 
-//require('./config/insert').insertInitialData();
+require('./config/insert').insertInitialData();
