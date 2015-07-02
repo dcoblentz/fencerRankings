@@ -1,6 +1,5 @@
 // load the todo model
-var Todo = require('./models/todo'),
-    FencerController = require('./controllers/fencerController'),
+var FencerController = require('./controllers/fencerController'),
     BoutController = require('./controllers/boutController'),
     OutcomeController = require('./controllers/outcomeController'),
     fencerController = new FencerController(),
